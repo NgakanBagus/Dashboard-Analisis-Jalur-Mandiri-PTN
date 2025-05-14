@@ -79,7 +79,7 @@ with tab2:
     sns.boxplot(data=filtered_df, x='Wilayah', y='UKT_Max', palette="Set2", ax=ax6)
     ax6.set_title("Distribusi UKT Maksimal Berdasarkan Wilayah")
     st.pyplot(fig6)
-    st.info("Wilayah Jawa cenderung memiliki variasi UKT maksimal yang lebih tinggi dibandingkan luar Jawa.")
+    st.info("Distribusi UKT maksimal di luar Jawa menunjukkan variasi yang lebih besar, dengan banyak program studi memiliki UKT tinggi sebagai outlier, dibandingkan wilayah Jawa yang distribusinya lebih rapat")
 
 with tab3:
     st.subheader("10 Program Studi dengan Daya Tampung Terbanyak")
