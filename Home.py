@@ -20,10 +20,10 @@ st.title("📊 Dashboard Analisis Jalur Mandiri PTN")
 st.markdown("Selamat datang di dashboard analisis **daya tampung** dan **UKT Jalur Mandiri** di Perguruan Tinggi Negeri. Gunakan navbar di samping untuk mengeksplorasi data berdasarkan wilayah.")
 st.markdown(""" 
              ## Kelompok 10 E:
-            - Ngakan Putu Bagus Ananta Wijaya
-            - NI GUSTI AYU AGUNG INDRASWARI
-            - Ni Kadek Dwi Marhaeni
-            - Ni Komang Ariasih
+            - Ngakan Putu Bagus Ananta Wijaya (554)
+            - NI GUSTI AYU AGUNG INDRASWARI (555)
+            - Ni Kadek Dwi Marhaeni (556)
+            - Ni Komang Ariasih (558)
             """)
 
 st.sidebar.title("🧭 Filter Data")
