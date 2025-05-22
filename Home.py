@@ -15,7 +15,6 @@ def load_data():
 
 df = load_data()
 
-# Judul dan deskripsi
 st.title("📊 Dashboard Analisis Jalur Mandiri PTN")
 st.markdown("Selamat datang di dashboard analisis **daya tampung** dan **UKT Jalur Mandiri** di Perguruan Tinggi Negeri. Gunakan navbar di samping untuk mengeksplorasi data berdasarkan wilayah.")
 st.markdown(""" 
@@ -28,23 +27,19 @@ st.markdown("""
 
 st.sidebar.title("🧭 Filter Data")
 
-# Filter wilayah
 wilayah_filter = st.sidebar.multiselect("Pilih Wilayah", options=df['Wilayah'].unique(), default=[])
 
-# Filter berdasarkan hasil wilayah
 if wilayah_filter:
     filtered_df = df[df['Wilayah'].isin(wilayah_filter)]
 else:
     filtered_df = df
 
-# Metrik ringkasan
 st.write("")
 col1, col2, col3 = st.columns(3)
 col1.metric("Jumlah PTN", f"{filtered_df['PTN'].nunique()} PTN")
 col2.metric("Jumlah Prodi", f"{filtered_df['Program Studi'].nunique()} Prodi")
 col3.metric("Total Daya Tampung", f"{int(filtered_df['Daya Tampung Jalur Mandiri'].sum()):,}")
 
-# Tabs visualisasi
 tab1, tab2, tab3, tab4 = st.tabs(["📌 Daya Tampung", "💸 UKT", "🏫 PTN & Prodi", "🌍 Wilayah"])
 
 with tab1:
